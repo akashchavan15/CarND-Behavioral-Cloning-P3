@@ -31,3 +31,4 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 
 ### Model parameter tuning
 I tried different gradient descent optimizers like Momentum, Adagrad, Nadam, SGD, Adam. I had a promising results from Adam where training and validation loss converged pretty consistently.
+<img src="examples/loss.jpg" width="480" alt="Training Loss" />
