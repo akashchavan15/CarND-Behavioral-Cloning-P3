@@ -115,8 +115,6 @@ print('Corrsponding steering wheel measurement y_train value: ', y_train[random_
 
 plt.imshow(X_train[random_integer])
 
-
-
 # Preprocess, normalize and mean center data
 
 ROI_start_line = 60
@@ -141,7 +139,6 @@ print('Corresponding steering angle measurement is: ', steering_angle_measuremen
 
 
 # Add Data Augmentation
-
 
 augmented_images = []
 augmented_measurements = []
@@ -207,24 +204,14 @@ Nvidia_model = Sequential()
 Nvidia_model.add(Lambda(resize_images, input_shape=input_shape))
 Nvidia_model.add(Lambda(lambda x: x/127.5-1))
 Nvidia_model.add(Convolution2D(24, 5, 5, border_mode="valid", subsample=(2,2), activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(SpatialDropout2D(0.2))
 Nvidia_model.add(Convolution2D(36, 5, 5, border_mode="valid", subsample=(2,2), activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(SpatialDropout2D(0.2))
 Nvidia_model.add(Convolution2D(48, 5, 5, border_mode="valid", subsample=(2,2), activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(SpatialDropout2D(0.3))
-
 Nvidia_model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(SpatialDropout2D(0.2))
 Nvidia_model.add(Convolution2D(64, 3, 3, border_mode="valid", activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(SpatialDropout2D(0.2))
-
 Nvidia_model.add(Flatten())
-#Nvidia_model.add(Dropout(0.3))
 Nvidia_model.add(Dense(100, activation="elu",W_regularizer=l2(0.002)))
 Nvidia_model.add(Dense(50, activation="elu",W_regularizer=l2(0.002)))
 Nvidia_model.add(Dense(10, activation="elu",W_regularizer=l2(0.002)))
-#Nvidia_model.add(Dropout(0.3))
-
 
 Nvidia_model.add(Dense(1))
 
