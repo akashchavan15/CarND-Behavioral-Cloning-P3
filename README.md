@@ -16,3 +16,9 @@ After exploring different models like AlexNet, VGGNET I decided to go with the m
 <img src="examples/NVIDIA.jpg" width="480" alt="NVDIA Model" />
 
 The model includes ELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer.
+
+### Training Data
+Training data provide by Udacity was not enough and vehicle was not recovering well during sharp turns just by using provided data. I drove vehicle in many different conditions and gathered many scenarios to recover vehicle on track, if diverted.Also, I used images from left and right cameras of vehicle with some correction factor, this collectively made good collection of data in different scenarios.
+<img src="examples/center.jpg" width="480" alt="center" />
+<img src="examples/left.jpg" width="480" alt="center" />
+<img src="examples/right.jpg" width="480" alt="center" />
