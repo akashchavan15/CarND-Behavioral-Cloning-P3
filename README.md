@@ -30,6 +30,6 @@ When I plotted these examples with respective steering wheel measurements, I had
 I finally randomly shuffled the data set and put 20% of the data into a validation set.
 
 ### Model parameter tuning
-I tried different gradient descent optimizers like Momentum, Adagrad, Nadam, SGD, Adam. I had a promising results from Adam where training and 
-validation loss converged pretty consistently.
+I tried different gradient descent optimizers like Momentum, Adagrad, Nadam, SGD, Adam. I had a promising results from Adam where training and  <br />
+validation loss converged pretty consistently.  <br />
 <img src="examples/loss.jpg" width="480" alt="Training Loss" />
