@@ -22,3 +22,12 @@ Training data provide by Udacity was not enough and vehicle was not recovering w
 <img src="examples/center.jpg" width="480" alt="center" />
 <img src="examples/left.jpg" width="480" alt="center" />
 <img src="examples/right.jpg" width="480" alt="center" />
+
+### Preprocessing
+I decided to shuffle the images so that the order in which images comes doesn't matters to the CNN. I also flipped the images and angles so as to have more reliable dataset in minimum driving which would train network how to compute steering wheel measurement equivocally.
+After the collection process, I had around 30,000 examples. 
+When I plotted these examples with respective steering wheel measurements, I had a clear picture that most of images were to drive straight which would make vechicle to take biased decision. To reduce these samples, I implemeneted functionality using keep_prob that would delete entries once average expected measurements are reached.
+I finally randomly shuffled the data set and put 20% of the data into a validation set.
+
+### Model parameter tuning
+I tried different gradient descent optimizers like Momentum, Adagrad, Nadam, SGD, Adam. I had a promising results from Adam where training and validation loss converged pretty consistently.
