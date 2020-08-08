@@ -12,4 +12,4 @@ Using Keras Deep learning framework we can create a ".h5" file which we can test
 
 Model Architecture and Training Strategy
 ---
-After exploring different models like AlexNet, VGGNET I decided to go with the model from NVDI. The model architecture is described in [a paper by Nvidia](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf).  
+After exploring different models like AlexNet, VGGNET I decided to go with the model from NVDIA. The model architecture is described in [a paper by Nvidia](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf).  
