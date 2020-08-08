@@ -18,7 +18,7 @@ After exploring different models like AlexNet, VGGNET I decided to go with the m
 The model includes ELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer.
 
 ### Final Model Architecture
-The final model architecture is shown as below
+The final model architecture is shown as below <br />
 <img src="examples/image1.png" width="480" alt="Model Architecture" />
 
 ### Training Data
