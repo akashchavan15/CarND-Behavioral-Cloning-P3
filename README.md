@@ -40,3 +40,15 @@ I tried different gradient descent optimizers like Momentum, Adagrad, Nadam, SGD
 ### Overfitting Reduction
 I started with using dropouts, spatial dropouts, and also tuned dropout’s keep_prob but it didnt help much. Good results were obtained by using L2 regularization.
 Using L2 regularization training and validation loss reduced significantly over the traning epochs. 
+
+## Outcome
+---
+During training validation set helped determine if the model was over or under fitting. By training the entire network it turned out that the ideal number of epochs were 4-5.
+Traninining for more epochs did not improve the loss significantly. Since I used an adam optimizer manual tuning of the learning rate wasn’t necessary.
+Finally the trained model was saved and used on simulator. The car completed the entire track without going off the track.
+
+## Final Comments
+---
+By doing this project I have found that not one solution works to every problem, we need to undestand our network and it's training data. Gradient descent optimizers like Adam, Adagrad, Nadam, SGD, Momentum may give different results on the same training data in same environment. We need to try different combinations to find out which is best for a problem in hand.
+
+The result can be seen in this [Video](https://github.com/akashchavan15/CarND-Behavioral-Cloning-P3/blob/master/run1.mp4)
